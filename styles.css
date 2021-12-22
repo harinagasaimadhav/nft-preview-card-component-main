@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    border-radius: .5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--main-bg);
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    color: hsl(0, 0%, 100%, 70%);
+    padding: 1.25rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 1.25rem;
+    border-radius: .75rem;
+    max-width: 340px;
+    margin-bottom: 1.25rem;
+}
+
+.card .main-image  {
+    position: relative;
+}
+
+.card .main-image div {
+    position: absolute;
+    background-color: hsl(178, 100%, 50%, 60%);
+    width: 100%;
+    height: calc(100% - 4px);
+    z-index: 999;
+    top: 0;
+    border-radius: .5rem;
+    opacity: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .25s ease-in-out ;
+}
+
+.card .main-image div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card h2 {
+    color: var(--White);
+    margin: 1rem 0;
+}
+
+.card h2:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.card ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;}
+
+.card ul li {
+    display: flex;
+    align-items: center;
+} 
+
+.card ul li:first-child {
+    color: var(--Cyan);
+}
+
+.card ul li:last-child {
+    margin-right: .25rem;
+}
+
+.card ul li img {
+    margin-right: .5rem;
+}
+
+.avatar-container {
+    border-top: 2px solid var(--line);
+    padding: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 0;
+}
+
+.avatar-container div {
+    max-width: 30px;
+    margin-right: 1rem;
+}
+.avatar-container div img {
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+
+.avatar-container p span {
+    color: var(--White);
+}
+
+.avatar-container p span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
